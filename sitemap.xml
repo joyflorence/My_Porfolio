@@ -2,12 +2,12 @@
 <!-- Replace https://example.com with your deployed site URL -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://joy-florence-porfolio.netlify.app/</loc>
   </url>
   <url>
-    <loc>https://example.com/about.html</loc>
+    <loc>https://joy-florence-porfolio.netlify.app/about.html</loc>
   </url>
   <url>
-    <loc>https://example.com/projects.html</loc>
+    <loc>https://joy-florence-porfolio.netlify.app/projects.html</loc>
   </url>
 </urlset>

@@ -173,11 +173,11 @@
           </p>
           <p class="muted">Availability: Open to freelance & full-time opportunities.</p>
         </div>
-        <form id="lead-form" class="lead-form" action="https://formsubmit.co/aworjoy5@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New portfolio lead - Awor Joy Florence">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="index.html#contact">
-          <input type="text" name="_honey" style="display:none">
+        <form id="lead-form" class="lead-form" name="lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+          <input type="hidden" name="form-name" value="lead">
+          <p style="display:none">
+            <label>Do not fill this field: <input name="bot-field"></label>
+          </p>
           <label for="lead-name">Name</label>
           <input id="lead-name" name="name" type="text" required>
           <label for="lead-email">Email</label>
