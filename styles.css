@@ -22,6 +22,16 @@ body{
 .site-header{backdrop-filter:saturate(120%) blur(6px);position:sticky;top:0;background:rgba(255,255,255,0.6);border-bottom:1px solid rgba(6,30,50,0.04)}
 .header-inner{display:flex;align-items:center;justify-content:space-between}
 .logo{margin:0;font-size:1.1rem;color:var(--text);font-weight:700}
+.back-link{
+  display:inline-block;
+  padding:7px 12px;
+  border-radius:10px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:var(--text);
+  text-decoration:none;
+  box-shadow:0 8px 20px rgba(96,192,255,0.2);
+}
+.back-link:hover{filter:brightness(1.03)}
 .nav a{color:var(--text);margin-left:18px;text-decoration:none;font-weight:600;opacity:0.85}
 .nav a:hover{color:var(--accent-2);opacity:1}
 
@@ -37,8 +47,37 @@ body{
 .nav-links{display:flex;align-items:center}
 @media (max-width:980px){
   .nav-toggle{display:block}
-  .nav-links{position:fixed;inset:0;top:64px;padding:28px;display:flex;flex-direction:column;align-items:flex-start;gap:18px;background:linear-gradient(180deg,var(--card),#f8feff);transform:translateY(-6px);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s ease;z-index:60}
-  .nav-links a{font-size:1.05rem;color:var(--text);opacity:0.95;margin-left:0}
+  .nav-links{
+    position:absolute;
+    right:0;
+    top:calc(100% + 8px);
+    width:min(240px, calc(100vw - 32px));
+    max-height:70vh;
+    overflow:auto;
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:6px;
+    background:linear-gradient(180deg,var(--card),#f8feff);
+    border:1px solid rgba(2,41,54,0.08);
+    border-radius:12px;
+    box-shadow:0 14px 30px rgba(2,41,54,0.14);
+    transform:translateY(-6px);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .22s ease,transform .22s ease;
+    z-index:60
+  }
+  .nav-links a{
+    font-size:0.98rem;
+    color:var(--text);
+    opacity:0.95;
+    margin-left:0;
+    padding:8px 10px;
+    border-radius:8px;
+  }
+  .nav-links a:hover{background:rgba(96,192,255,0.12)}
   .nav-links.open{opacity:1;pointer-events:auto;transform:translateY(0)}
   .header-inner{position:relative}
   .nav a{margin-left:0}
@@ -71,17 +110,41 @@ body{
 .data-viz-svg{max-width:100%;height:auto}
 .data-viz-figure figcaption{margin-top:8px;color:var(--muted);font-size:0.95rem}
 
-/* Header resume button */
-.header-resume{
+/* Header resume menu */
+.resume-menu{position:relative;margin-left:14px}
+.header-resume-toggle{
   background:linear-gradient(90deg,var(--accent),var(--accent-2));
   color:var(--text);
   border:0;
   padding:8px 12px;
   border-radius:10px;
-  margin-left:14px;
   box-shadow:0 8px 20px rgba(96,192,255,0.2);
+  cursor:pointer;
 }
-.header-resume:hover{filter:brightness(1.03)}
+.header-resume-toggle:hover{filter:brightness(1.03)}
+.resume-dropdown{
+  position:absolute;
+  right:0;
+  top:calc(100% + 8px);
+  min-width:160px;
+  background:var(--card);
+  border:1px solid rgba(2,41,54,0.08);
+  border-radius:10px;
+  box-shadow:0 14px 30px rgba(2,41,54,0.14);
+  display:none;
+  padding:6px;
+  z-index:90;
+}
+.resume-menu.open .resume-dropdown{display:block}
+.resume-dropdown a{
+  display:block;
+  padding:8px 10px;
+  border-radius:8px;
+  color:var(--text);
+  text-decoration:none;
+  font-weight:600;
+}
+.resume-dropdown a:hover{background:rgba(96,192,255,0.12)}
 
 .lead{font-size:1.1rem;margin:0 0 8px}
 .contact-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:20px;align-items:stretch}
@@ -140,7 +203,9 @@ body{
   .contact-layout{grid-template-columns:1fr}
   .container{padding:28px 16px}
   .logo{font-size:1rem}
-  .header-resume{padding:7px 10px;margin-left:8px}
+  .resume-menu{margin-left:8px}
+  .header-resume-toggle{padding:7px 10px}
+  .resume-dropdown{right:0;left:auto}
   .project-banner{height:180px}
 }
 
@@ -166,8 +231,8 @@ body{
   .card-link{padding:8px 12px;border-radius:8px;display:inline-block}
 
   /* Nav adjustments for very small screens */
-  .nav-links{top:56px;padding:20px}
-  .nav-links a{font-size:1.08rem;padding:10px 6px}
+  .nav-links{top:calc(100% + 6px);width:min(220px, calc(100vw - 24px));padding:8px}
+  .nav-links a{font-size:0.95rem;padding:7px 9px}
   .nav-toggle{padding:10px}
 }
 

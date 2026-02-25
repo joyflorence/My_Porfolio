@@ -46,7 +46,13 @@
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a href="Resume.pdf" download class="button header-resume">Download Resume</a>
+      <div class="resume-menu">
+        <button class="button header-resume-toggle" type="button" aria-haspopup="true" aria-expanded="false">View Resume</button>
+        <div class="resume-dropdown" role="menu" aria-label="Resume options">
+          <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" role="menuitem">Preview</a>
+          <a href="Resume.pdf" download role="menuitem">Download</a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -411,6 +417,30 @@
         if (e.key === 'Escape' && nav.classList.contains('open')){
           toggle.click();
         }
+      });
+    })();
+  </script>
+  <script>
+    (function(){
+      const menu = document.querySelector('.resume-menu');
+      if (!menu) return;
+      const btn = menu.querySelector('.header-resume-toggle');
+      const dropdown = menu.querySelector('.resume-dropdown');
+      if (!btn || !dropdown) return;
+      const closeMenu = ()=>{
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      };
+      btn.addEventListener('click', (e)=>{
+        e.stopPropagation();
+        const open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(open));
+      });
+      document.addEventListener('click', (e)=>{
+        if (!menu.contains(e.target)) closeMenu();
+      });
+      document.addEventListener('keydown', (e)=>{
+        if (e.key === 'Escape') closeMenu();
       });
     })();
   </script>
