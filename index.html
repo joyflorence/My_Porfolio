@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Awor Joy Florence | Data Analyst Portfolio</title>
+  <meta name="description" content="Awor Joy Florence is a data analyst focused on dashboards, experiments, modeling, and actionable business insights.">
+  <meta property="og:title" content="Awor Joy Florence | Data Analyst Portfolio">
+  <meta property="og:description" content="Portfolio of data analysis work, projects, and contact details for Awor Joy Florence.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Awor Joy Florence | Data Analyst Portfolio">
+  <meta name="twitter:description" content="Portfolio of data analysis work, projects, and contact details for Awor Joy Florence.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="welcome-overlay" class="welcome-overlay" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+    <div class="welcome-card" tabindex="0">
+      <svg class="welcome-blob" viewBox="0 0 500 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs></defs>
+        <path id="blob" fill="#9be7ff" d="M421.4,263.7c-16.8,62.8-67.9,115.6-129.7,135.6-61.9,20-134.5,6.4-164.8-36.1C75.2,318,80.4,258.9,96.2,200.6,112,142.4,138.6,85,192.6,65.8c54-19.3,140.7-9.7,183.5,24.8,42.8,34.6,46.4,104.3,45.3,173.1z">
+          <animate attributeName="d" dur="2.2s" repeatCount="indefinite" values="M421.4,263.7c-16.8,62.8-67.9,115.6-129.7,135.6-61.9,20-134.5,6.4-164.8-36.1C75.2,318,80.4,258.9,96.2,200.6,112,142.4,138.6,85,192.6,65.8c54-19.3,140.7-9.7,183.5,24.8,42.8,34.6,46.4,104.3,45.3,173.1z;M447.6,257.7c-7.8,67.8-63.1,123.4-127.8,145.8-64.7,22.4-140.4,11.6-171.1-28.6C79.7,339.2,86.8,268,104.1,206.5,121.5,145,148.9,95.2,202.8,77.3c53.9-17.9,139.9-12.9,184.2,19.1,44.3,32,52.7,95.9,56.5,161z;M421.4,263.7c-16.8,62.8-67.9,115.6-129.7,135.6-61.9,20-134.5,6.4-164.8-36.1C75.2,318,80.4,258.9,96.2,200.6,112,142.4,138.6,85,192.6,65.8c54-19.3,140.7-9.7,183.5,24.8,42.8,34.6,46.4,104.3,45.3,173.1z" />
+        </path>
+      </svg>
+      <div class="welcome-text">
+        <h1 id="welcome-title">Welcome! I'm Awor Joy Florence</h1>
+        <p class="muted">Data Analyst, I turn data into decisions</p>
+      </div>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="profile-photo profile-small profile-initials" aria-hidden="true">AJ</div>
+      <h1 class="logo">Awor Joy Florence</h1>
+
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="primary-nav" class="nav nav-links">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="Resume.pdf" download class="button header-resume">Download Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-left">
+          <h2>Hi! I'm Awor Joy Florence</h2>
+          <p class="role">Data Analyst</p>
+          <p class="value">I help teams turn messy data into growth decisions through dashboards, experimentation, and predictive analysis.</p>
+          <div class="hero-ctas">
+            <a class="cta" href="#lead-form">Discuss Your Project</a>
+            <a class="cta secondary" href="projects.html">View Case Studies</a>
+          </div>
+          <p class="muted">Available for freelance analytics projects and full-time roles.</p>
+        </div>
+        <div class="hero-right">
+          <div class="dynamic-chart" role="img" aria-label="Live data preview">
+            <svg id="dynamicChart" viewBox="0 0 360 220" preserveAspectRatio="xMidYMid meet">
+              <rect width="100%" height="100%" fill="transparent"></rect>
+              <defs>
+                <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#9be7ff" stop-opacity="0.9" />
+                  <stop offset="100%" stop-color="#e6f9ff" stop-opacity="0.2" />
+                </linearGradient>
+              </defs>
+              <g id="bars" transform="translate(20,20)"></g>
+              <path id="area" fill="url(#g1)" opacity="0.9"></path>
+              <polyline id="line" fill="none" stroke="#0472a8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"></polyline>
+              <g id="scatter" opacity="0"></g>
+              <g id="donut" transform="translate(270,60)" opacity="0"></g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Removed static figure; dynamic chart lives in the hero preview on the right -->
+
+    <section id="about" class="about container">
+      <h3>About Me</h3>
+      <p>I transform messy data into clear, actionable insights. I build dashboards, run experiments, and develop models to help teams prioritise work and measure impact. I enjoy turning ambiguity into evidence-backed recommendations and communicating findings to non-technical stakeholders.</p>
+    </section>
+
+    <section id="projects" class="projects container">
+      <h3>Selected Projects</h3>
+      <div class="grid">
+        <article class="card">
+          <div class="card-image bg-sales" role="img" aria-label="Sales Insights dashboard preview"></div>
+          <div class="card-content">
+            <h4>Sales Insights Dashboard</h4>
+            <p>Interactive dashboard to monitor revenue, product performance, and regional trends for monthly reviews.</p>
+            <div style="margin:8px 0">
+              <span class="pill">Python</span><span class="pill">SQL</span><span class="pill">Tableau</span>
+            </div>
+            <a class="card-link" href="projects.html#sales-insights">Case study</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image bg-churn" role="img" aria-label="Customer churn model preview"></div>
+          <div class="card-content">
+            <h4>Customer Churn Model</h4>
+            <p>Predictive model identifying at-risk customers with actionable segments for retention campaigns.</p>
+            <div style="margin:8px 0">
+              <span class="pill">Python</span><span class="pill">scikit-learn</span><span class="pill">SQL</span>
+            </div>
+            <a class="card-link" href="projects.html#churn-model">Case study</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image bg-ab" role="img" aria-label="A/B test analysis preview"></div>
+          <div class="card-content">
+            <h4>A/B Test Analysis</h4>
+            <p>Statistical analysis of feature experiments to determine significance and estimate lift for product decisions.</p>
+            <div style="margin:8px 0">
+              <span class="pill">Stats</span><span class="pill">Python</span><span class="pill">R</span>
+            </div>
+            <a class="card-link" href="projects.html#ab-testing">Case study</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="skills container">
+      <div class="skills-card">
+        <h3>Skills</h3>
+        <p class="skills-intro">Core skills I bring to projects — focused on analysis, visualization and operational impact.</p>
+        <ul class="skills-list">
+          <li>Python (pandas, numpy)</li>
+          <li>SQL & Databases</li>
+          <li>Data Visualization (Tableau, Plotly)</li>
+          <li>Statistics & A/B Testing</li>
+          <li>Machine Learning (scikit-learn)</li>
+        </ul>
+      </div>
+    </section>
+
+        <section id="contact" class="contact container">
+      <h3>Contact</h3>
+      <p class="lead">Tell me what you are building, and I will respond within 24 hours.</p>
+      <div class="contact-layout">
+        <div class="contact-details">
+          <p><a class="button" href="mailto:aworjoy5@gmail.com">aworjoy5@gmail.com</a></p>
+          <p><strong>Phone</strong><br>
+            <a class="muted" href="tel:+256781521681">+256 781 521 681</a><br>
+            <a class="muted" href="tel:+256743498651">+256 743 498 651</a>
+          </p>
+          <h4>Connect</h4>
+          <p class="social-row">
+            <a href="https://github.com/joyflorence" target="_blank" rel="me noopener noreferrer" class="social" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.38-3.88-1.38-.53-1.36-1.3-1.72-1.3-1.72-1.06-.73.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.11-.76.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.71 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.02 11.02 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.44-2.7 5.42-5.28 5.7.42.37.8 1.1.8 2.22 0 1.6-.01 2.89-.01 3.28 0 .31.21.68.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/joy-florence-awor-007527275" target="_blank" rel="me noopener noreferrer" class="social" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.99h4V24h-4V8.99zM9.5 8.99h3.84v2.05h.06c.54-1.02 1.86-2.1 3.83-2.1 4.1 0 4.86 2.7 4.86 6.2V24h-4v-7.3c0-1.74-.03-3.98-2.42-3.98-2.42 0-2.79 1.89-2.79 3.84V24h-4V8.99z"/></svg>
+            </a>
+          </p>
+          <p class="muted">Availability: Open to freelance & full-time opportunities.</p>
+        </div>
+        <form id="lead-form" class="lead-form" action="https://formsubmit.co/aworjoy5@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New portfolio lead - Awor Joy Florence">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="index.html#contact">
+          <input type="text" name="_honey" style="display:none">
+          <label for="lead-name">Name</label>
+          <input id="lead-name" name="name" type="text" required>
+          <label for="lead-email">Email</label>
+          <input id="lead-email" name="email" type="email" required>
+          <label for="lead-company">Company (optional)</label>
+          <input id="lead-company" name="company" type="text">
+          <label for="lead-message">Project brief</label>
+          <textarea id="lead-message" name="message" rows="4" placeholder="What do you need help with?" required></textarea>
+          <button class="button" type="submit">Send Inquiry</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+    <footer class="site-footer">
+      <div class="container">&copy; <span id="year"></span> Awor Joy Florence</div>
+    </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    // Dynamic chart in hero-right: supports bars, line, area, donut, scatter; cycles through types
+    (function(){
+      const svg = document.getElementById('dynamicChart');
+      if (!svg) return;
+      const barsGroup = svg.querySelector('#bars');
+      const line = svg.querySelector('#line');
+      const area = svg.querySelector('#area');
+      const scatter = svg.querySelector('#scatter');
+      const donut = svg.querySelector('#donut');
+      const count = 6;
+      const w = 300; const h = 160; const gap = 12;
+      const barW = Math.floor((w - gap*(count-1)) / count);
+
+      // create initial bars
+      const barEls = [];
+      for (let i=0;i<count;i++){
+        const rect = document.createElementNS('http://www.w3.org/2000/svg','rect');
+        rect.setAttribute('x', i*(barW+gap));
+        rect.setAttribute('width', barW);
+        rect.setAttribute('y', h);
+        rect.setAttribute('height', 0);
+        rect.setAttribute('rx', 6);
+        rect.setAttribute('fill', '#60c0ff');
+        barsGroup.appendChild(rect);
+        barEls.push(rect);
+      }
+
+      // create scatter points
+      const scatterEls = [];
+      for (let i=0;i<count;i++){
+        const dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
+        dot.setAttribute('cx', i*(barW+gap) + barW/2);
+        dot.setAttribute('cy', h);
+        dot.setAttribute('r', 0);
+        dot.setAttribute('fill', '#0472a8');
+        scatter.appendChild(dot);
+        scatterEls.push(dot);
+      }
+
+      function setLine(data){
+        const pts = data.map((v,i)=>{
+          const x = i*(barW+gap) + barW/2;
+          const y = h - Math.round(v*h);
+          return `${x},${y}`;
+        }).join(' ');
+        line.setAttribute('points', pts);
+        // area path
+        const areaPts = ['M0,'+h];
+        data.forEach((v,i)=>{ areaPts.push((i*(barW+gap) + barW/2)+','+(h - Math.round(v*h))); });
+        areaPts.push('L'+( (count-1)*(barW+gap)+barW )+','+h);
+        area.setAttribute('d', areaPts.join(' '));
+      }
+
+      function setBars(data){
+        data.forEach((v,i)=>{
+          const targetH = Math.max(6, Math.round(v * h));
+          const y = h - targetH;
+          barEls[i].setAttribute('y', y);
+          barEls[i].setAttribute('height', targetH);
+        });
+      }
+
+      function setScatter(data){
+        data.forEach((v,i)=>{
+          const cx = i*(barW+gap) + barW/2;
+          const cy = h - Math.round(v * h);
+          scatterEls[i].setAttribute('cx', cx);
+          scatterEls[i].setAttribute('cy', cy);
+          scatterEls[i].setAttribute('r', 5);
+        });
+      }
+
+      function setDonut(values){
+        // values array of numbers; convert to percentages
+        const total = values.reduce((a,b)=>a+b,0) || 1;
+        const angles = values.map(v=> (v/total)*Math.PI*2 );
+        // clear
+        while (donut.firstChild) donut.removeChild(donut.firstChild);
+        let start = -Math.PI/2;
+        const radius = 36; const stroke = 20;
+        const colors = ['#60c0ff','#9be7ff','#a6f3d3','#ffd6a5'];
+        for (let i=0;i<values.length;i++){
+          const a = angles[i];
+          const end = start + a;
+          const x1 = Math.cos(start)*radius; const y1 = Math.sin(start)*radius;
+          const x2 = Math.cos(end)*radius; const y2 = Math.sin(end)*radius;
+          const large = a > Math.PI ? 1 : 0;
+          const path = document.createElementNS('http://www.w3.org/2000/svg','path');
+          const d = `M ${x1} ${y1} A ${radius} ${radius} 0 ${large} 1 ${x2} ${y2}`;
+          path.setAttribute('d', d);
+          path.setAttribute('fill','none');
+          path.setAttribute('stroke', colors[i%colors.length]);
+          path.setAttribute('stroke-width', stroke);
+          path.setAttribute('stroke-linecap','butt');
+          donut.appendChild(path);
+          start = end;
+        }
+        // center label
+        const text = document.createElementNS('http://www.w3.org/2000/svg','text');
+        text.setAttribute('x', 0); text.setAttribute('y', 6); text.setAttribute('text-anchor','middle');
+        text.setAttribute('fill','#04293a'); text.setAttribute('font-weight','700'); text.setAttribute('font-size','12');
+        text.textContent = Math.round(values[0]*100)+'%';
+        donut.appendChild(text);
+      }
+
+      function randomSeries(){ return Array.from({length:count}, ()=>Math.random()*0.95); }
+
+      const modes = ['line','bars','area','donut','scatter'];
+      let idx = 0;
+
+      function applyModeVisuals(mode, data){
+        barsGroup.style.opacity = mode === 'bars' ? '1' : '0';
+        line.style.opacity = (mode === 'line' || mode === 'area') ? '0.95' : '0';
+        area.style.opacity = mode === 'area' ? '0.9' : '0';
+        donut.style.opacity = mode === 'donut' ? '1' : '0';
+        scatter.style.opacity = mode === 'scatter' ? '1' : '0';
+        setBars(data);
+        setLine(data);
+        setScatter(data);
+        if (mode === 'donut'){
+          const d = [Math.random()*4+1, Math.random()*3+0.5, Math.random()*2+0.2];
+          setDonut(d);
+        }
+      }
+
+      function tick(){
+        const mode = modes[idx % modes.length];
+        const data = randomSeries();
+        applyModeVisuals(mode, data);
+        idx++;
+      }
+
+      // initial
+      tick();
+      setInterval(tick, 2600);
+
+    })();
+  </script>
+  <script>
+    // Welcome overlay: remove after animation or on user interaction
+    (function(){
+      const overlay = document.getElementById('welcome-overlay');
+      if (!overlay) return;
+      const welcomeCard = overlay.querySelector('.welcome-card');
+      const previouslyFocused = document.activeElement;
+      const previousOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      if (welcomeCard) welcomeCard.focus();
+      let removed = false;
+      const focusableSelector = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
+      const getFocusable = ()=> Array.from(overlay.querySelectorAll(focusableSelector)).filter(el=>!el.hasAttribute('disabled'));
+      // If the user clicked the header logo to navigate here, suppress the overlay
+      if (sessionStorage.getItem('suppressWelcome')){
+        sessionStorage.removeItem('suppressWelcome');
+        document.body.style.overflow = previousOverflow;
+        overlay.remove();
+        return;
+      }
+      const removeOverlay = ()=>{
+        if (removed) return;
+        removed = true;
+        overlay.removeEventListener('keydown', handleOverlayKeydown);
+        document.body.style.overflow = previousOverflow;
+        overlay.classList.add('hide');
+        overlay.addEventListener('transitionend', ()=>{
+          overlay.remove();
+          if (previouslyFocused && previouslyFocused.focus) previouslyFocused.focus();
+        }, {once:true});
+      };
+      const handleOverlayKeydown = (e)=>{
+        if (e.key === 'Escape' || e.key === 'Enter'){
+          removeOverlay();
+          return;
+        }
+        if (e.key !== 'Tab') return;
+        const focusables = getFocusable();
+        if (focusables.length === 0){
+          e.preventDefault();
+          if (welcomeCard) welcomeCard.focus();
+          return;
+        }
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first){
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last){
+          e.preventDefault();
+          first.focus();
+        }
+      };
+      // auto-dismiss after 2300ms
+      window.addEventListener('load', ()=>{
+        setTimeout(removeOverlay, 2300);
+      });
+      // allow click or key to skip
+      overlay.addEventListener('click', removeOverlay);
+      overlay.addEventListener('keydown', handleOverlayKeydown);
+    })();
+  </script>
+  <script>
+    (function(){
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function(){
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        this.setAttribute('aria-label', expanded ? 'Open menu' : 'Close menu');
+        nav.classList.toggle('open');
+        document.body.classList.toggle('nav-open');
+      });
+      // close on escape
+      document.addEventListener('keydown', (e)=>{
+        if (e.key === 'Escape' && nav.classList.contains('open')){
+          toggle.click();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
+
+

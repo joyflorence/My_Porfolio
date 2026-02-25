@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About | Awor Joy Florence</title>
+  <meta name="description" content="About Awor Joy Florence: data analyst background, tools, and approach to solving business problems with data.">
+  <meta property="og:title" content="About | Awor Joy Florence">
+  <meta property="og:description" content="Background, skills, and working style of data analyst Awor Joy Florence.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="About | Awor Joy Florence">
+  <meta name="twitter:description" content="Background, skills, and working style of data analyst Awor Joy Florence.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" onclick="sessionStorage.setItem('suppressWelcome','1')">Awor Joy Florence</a>
+      <button class="nav-toggle" aria-controls="primary-nav-about" aria-expanded="false" aria-label="Open menu">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="primary-nav-about" class="nav nav-links">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="index.html#skills" onclick="sessionStorage.setItem('suppressWelcome','1')">Skills</a>
+        <a href="index.html#contact" onclick="sessionStorage.setItem('suppressWelcome','1')">Contact</a>
+      </nav>
+      <a href="Resume.pdf" download class="button header-resume">Download Resume</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>About Me</h1>
+    <p class="muted">People hire people. Here is a little about my background and approach as a data practitioner.</p>
+
+    <section class="about-me">
+      <h2>Background & Journey</h2>
+      <p>I began working with data during academic research and transitioned into applied data analysis for product teams. I enjoy turning ambiguous data into clear stories and operational recommendations.</p>
+
+      <h2>Skills & Tools</h2>
+      <ul class="skills-list">
+        <li>Python (pandas, numpy)</li>
+        <li>SQL & relational databases</li>
+        <li>Data visualization (Tableau, matplotlib, Plotly)</li>
+        <li>Machine learning (scikit-learn, XGBoost)</li>
+        <li>Experimentation & statistics</li>
+        <li>ETL / data pipelines</li>
+      </ul>
+
+      <h2>What I Enjoy</h2>
+      <p>Working end-to-end on analysis problems: from data cleaning and modeling to dashboards and stakeholder communication.</p>
+
+      <h2>Personality</h2>
+      <p>Curious, pragmatic, and collaborative. I focus on clear communication and measurable impact.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">&copy; <span id="year3"></span> Awor Joy Florence</div>
+  </footer>
+
+  <script>document.getElementById('year3').textContent=new Date().getFullYear();</script>
+  <script>
+    (function(){
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav-about');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function(){
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        this.setAttribute('aria-label', expanded ? 'Open menu' : 'Close menu');
+        nav.classList.toggle('open');
+        document.body.classList.toggle('nav-open');
+      });
+      document.addEventListener('keydown', (e)=>{
+        if (e.key === 'Escape' && nav.classList.contains('open')){
+          toggle.click();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

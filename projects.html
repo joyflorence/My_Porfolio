@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projects | Awor Joy Florence</title>
+  <meta name="description" content="Project case studies by Awor Joy Florence covering dashboards, churn modeling, experimentation, and optimization.">
+  <meta property="og:title" content="Projects | Awor Joy Florence">
+  <meta property="og:description" content="Selected data analysis projects with problem, process, and outcomes.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Projects | Awor Joy Florence">
+  <meta name="twitter:description" content="Selected data analysis projects with problem, process, and outcomes.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" onclick="sessionStorage.setItem('suppressWelcome','1')">Awor Joy Florence</a>
+      <button class="nav-toggle" aria-controls="primary-nav-projects" aria-expanded="false" aria-label="Open menu">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="primary-nav-projects" class="nav nav-links">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="index.html#skills" onclick="sessionStorage.setItem('suppressWelcome','1')">Skills</a>
+        <a href="index.html#contact" onclick="sessionStorage.setItem('suppressWelcome','1')">Contact</a>
+      </nav>
+      <a href="Resume.pdf" download class="button header-resume">Download Resume</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Sample Projects</h1>
+    <p class="muted">Focused, high-impact data work with clear problems, methodology, and outcomes.</p>
+
+    <section id="sales-insights" class="project-detail">
+      <h2>Sales Insights Dashboard</h2>
+      <div class="project-banner banner-sales" role="img" aria-label="Sales dashboard visual"></div>
+      <h4>Problem</h4>
+      <p>Leadership needed a single source of truth for weekly sales performance across regions and products.</p>
+      <h4>Role</h4>
+      <p>Data Analyst (Dashboard lead)</p>
+      <h4>Process</h4>
+      <p>ETL from transactional DB, designed KPIs, prototyped in Python/Plotly, built final dashboard in Tableau.</p>
+      <h4>Final Result</h4>
+      <p>Interactive dashboard with drill-downs, trend decomposition, and automated weekly reports.</p>
+      <h4>Outcome</h4>
+      <p>Enabled faster decisions and identified a $250k/month opportunity by highlighting underperforming SKUs.</p>
+    </section>
+
+    <section id="churn-model" class="project-detail">
+      <h2>Customer Churn Model</h2>
+      <div class="project-banner banner-churn" role="img" aria-label="Customer churn model visual"></div>
+      <h4>Problem</h4>
+      <p>High churn among new users with limited visibility into root causes.</p>
+      <h4>Role</h4>
+      <p>Modeler & Analyst</p>
+      <h4>Process</h4>
+      <p>Feature engineering, stratified sampling, trained multiple models (XGBoost), evaluated with precision-recall.</p>
+      <h4>Final Result</h4>
+      <p>Production-ready model with cohort-based feature importance and retention recommendations.</p>
+      <h4>Outcome</h4>
+      <p>Guided targeted campaigns that reduced churn 15% in the pilot cohort.</p>
+    </section>
+
+    <section id="ab-testing" class="project-detail">
+      <h2>A/B Test Analysis</h2>
+      <div class="project-banner banner-ab" role="img" aria-label="A/B test analysis visual"></div>
+      <h4>Problem</h4>
+      <p>Product experiments lacked systematic analysis and reporting, causing ambiguous decisions.</p>
+      <h4>Role</h4>
+      <p>Experimentation Analyst</p>
+      <h4>Process</h4>
+      <p>Defined metrics, computed power analysis, ran Bayesian and frequentist tests, and produced clear decision rules.</p>
+      <h4>Final Result</h4>
+      <p>Standardized experiment template and reporting pipeline with confidence intervals and expected value calculations.</p>
+      <h4>Outcome</h4>
+      <p>Reduced false positives and improved experiment throughput.</p>
+    </section>
+
+    <section id="supply-opt" class="project-detail">
+      <h2>Supply Chain Optimization</h2>
+      <div class="project-banner banner-supply" role="img" aria-label="Supply chain optimization visual"></div>
+      <h4>Problem</h4>
+      <p>Inventory shortages and overstock issues caused increased costs and missed sales.</p>
+      <h4>Role</h4>
+      <p>Data Analyst / Modeler</p>
+      <h4>Process</h4>
+      <p>Built demand forecasting models, optimized reorder points, and simulated scenarios.</p>
+      <h4>Final Result</h4>
+      <p>Reorder recommendations integrated into weekly planning workflow.</p>
+      <h4>Outcome</h4>
+      <p>Reduced stockouts by 28% and holding costs by 12%.</p>
+    </section>
+
+    <section id="sentiment" class="project-detail">
+      <h2>Sentiment Analysis</h2>
+      <div class="project-banner banner-sentiment" role="img" aria-label="Sentiment analysis visual"></div>
+      <h4>Problem</h4>
+      <p>Manual review of customer feedback was slow and inconsistent.</p>
+      <h4>Role</h4>
+      <p>NLP Analyst</p>
+      <h4>Process</h4>
+      <p>Cleaned textual data, trained classifiers, and visualized topic trends with LDA and embeddings.</p>
+      <h4>Final Result</h4>
+      <p>Automated tagging and dashboards to monitor sentiment by product line.</p>
+      <h4>Outcome</h4>
+      <p>Customer satisfaction insights led to focused fixes and an 11% improvement in NPS for targeted products.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">&copy; <span id="year2"></span> Awor Joy Florence</div>
+  </footer>
+
+  <script>document.getElementById('year2').textContent=new Date().getFullYear();</script>
+  <script>
+    (function(){
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav-projects');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function(){
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        this.setAttribute('aria-label', expanded ? 'Open menu' : 'Close menu');
+        nav.classList.toggle('open');
+        document.body.classList.toggle('nav-open');
+      });
+      document.addEventListener('keydown', (e)=>{
+        if (e.key === 'Escape' && nav.classList.contains('open')){
+          toggle.click();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
