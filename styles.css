@@ -145,6 +145,15 @@ body{
   font-weight:600;
 }
 .resume-dropdown a:hover{background:rgba(96,192,255,0.12)}
+.thanks-home{
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:var(--text);
+  border:1px solid rgba(2,41,54,0.06);
+  box-shadow:0 10px 24px rgba(96,192,255,0.2);
+  border-radius:12px;
+  padding:10px 16px;
+}
+.thanks-home:hover{filter:brightness(1.03)}
 
 .lead{font-size:1.1rem;margin:0 0 8px}
 .contact-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:20px;align-items:stretch}
