@@ -351,9 +351,15 @@
       let removed = false;
       const focusableSelector = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
       const getFocusable = ()=> Array.from(overlay.querySelectorAll(focusableSelector)).filter(el=>!el.hasAttribute('disabled'));
+      const url = new URL(window.location.href);
+      const suppressFromQuery = url.searchParams.get('suppressWelcome') === '1';
       // If the user clicked the header logo to navigate here, suppress the overlay
-      if (sessionStorage.getItem('suppressWelcome')){
+      if (suppressFromQuery || sessionStorage.getItem('suppressWelcome')){
         sessionStorage.removeItem('suppressWelcome');
+        if (suppressFromQuery){
+          url.searchParams.delete('suppressWelcome');
+          window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+        }
         document.body.style.overflow = previousOverflow;
         overlay.remove();
         return;
