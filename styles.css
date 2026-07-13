@@ -90,7 +90,7 @@ body{
 .nav-toggle[aria-expanded="true"] .hamburger{background:transparent}
 .nav-toggle[aria-expanded="true"] .hamburger::before{transform:translateY(7px) rotate(45deg)}
 .nav-toggle[aria-expanded="true"] .hamburger::after{transform:translateY(-7px) rotate(-45deg)}
-.hero{padding:80px 0;text-align:left}
+.hero{padding:56px 0 24px;text-align:left}
 .hero h2{font-size:2.2rem;margin:0 0 12px}
 .hero p{color:var(--muted);max-width:60ch}
 .cta{display:inline-block;margin-top:18px;padding:10px 16px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:var(--text); border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 8px 20px rgba(96,192,255,0.18)}
@@ -180,7 +180,7 @@ body{
 .about-me{background:var(--card);padding:20px;border-radius:12px;border:1px solid rgba(2,41,54,0.04)}
 
 
-.about,.projects,.skills,.contact{padding:40px 0}
+.about,.projects,.skills,.contact{padding:32px 0}
 .projects .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);align-items:stretch}
 .section-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
 .section-heading h3{margin:0}

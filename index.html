@@ -104,8 +104,8 @@
       </div>
       <p class="muted">A curated selection of recent analytics work. Each card opens the full case study on the projects page.</p>
       <div class="grid">
-  
-        <article class="card" data-code-url="https://github.com/joyflorence/marginwatch" data-dashboard-url="https://marginwatch-zo8a9ppk5jmhwix8kzyy6q.streamlit.app/"></article>
+
+        <article class="card">
           <div class="card-image bg-sales" role="img" aria-label="Sales Insights dashboard preview"></div>
           <div class="card-content">
             <h4>Sales Insights Dashboard</h4>
@@ -114,14 +114,14 @@
               <span class="pill">Python</span><span class="pill">PostgreSQL</span><span class="pill">Streamlit</span>
             </div>
             <div class="project-links">
-              <a class="project-link" data-link="code" href="#" target="_blank" rel="noopener noreferrer">Code</a>
-              <a class="project-link" data-link="dashboard" href="#" target="_blank" rel="noopener noreferrer">Dashboard</a>
+              <a class="project-link" href="https://github.com/joyflorence/marginwatch" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="project-link" href="https://marginwatch-zo8a9ppk5jmhwix8kzyy6q.streamlit.app/" target="_blank" rel="noopener noreferrer">Dashboard</a>
             </div>
             <a class="card-link" href="projects.html#sales-insights">Open case study</a>
           </div>
         </article>
 
-        <article class="card" data-code-url="" data-dashboard-url=""></article>
+        <article class="card">
           <div class="card-image bg-churn" role="img" aria-label="Customer churn model preview"></div>
           <div class="card-content">
             <h4>Customer Churn Model</h4>
@@ -130,14 +130,14 @@
               <span class="pill">Python</span><span class="pill">scikit-learn</span><span class="pill">SQL</span>
             </div>
             <div class="project-links">
-              <a class="project-link" data-link="code" href="#" target="_blank" rel="noopener noreferrer">Code</a>
-              <a class="project-link" data-link="dashboard" href="#" target="_blank" rel="noopener noreferrer">Dashboard</a>
+              <a class="project-link" href="https://github.com/joyflorence/churn-model" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="project-link" href="https://example-dashboard-url.com/churn" target="_blank" rel="noopener noreferrer">Dashboard</a>
             </div>
             <a class="card-link" href="projects.html#churn-model">Open case study</a>
           </div>
         </article>
 
-        <article class="card" data-code-url="" data-dashboard-url="">
+        <article class="card">
           <div class="card-image bg-ab" role="img" aria-label="A/B test analysis preview"></div>
           <div class="card-content">
             <h4>A/B Test Analysis</h4>
@@ -146,8 +146,8 @@
               <span class="pill">Stats</span><span class="pill">Python</span><span class="pill">R</span>
             </div>
             <div class="project-links">
-              <a class="project-link" data-link="code" href="#" target="_blank" rel="noopener noreferrer">Code</a>
-              <a class="project-link" data-link="dashboard" href="#" target="_blank" rel="noopener noreferrer">Dashboard</a>
+              <a class="project-link" href="https://github.com/joyflorence/ab-test-analysis" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="project-link" href="https://example-dashboard-url.com/ab-test" target="_blank" rel="noopener noreferrer">Dashboard</a>
             </div>
             <a class="card-link" href="projects.html#ab-testing">Open case study</a>
           </div>
@@ -215,32 +215,6 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <script>
-    (function(){
-      document.querySelectorAll('.card[data-code-url], .card[data-dashboard-url]').forEach((card)=>{
-        const codeLink = card.querySelector('[data-link="code"]');
-        const dashboardLink = card.querySelector('[data-link="dashboard"]');
-        const codeUrl = (card.getAttribute('data-code-url') || '').trim();
-        const dashboardUrl = (card.getAttribute('data-dashboard-url') || '').trim();
-
-        if (codeLink) {
-          if (codeUrl) {
-            codeLink.setAttribute('href', codeUrl);
-          } else {
-            codeLink.remove();
-          }
-        }
-
-        if (dashboardLink) {
-          if (dashboardUrl) {
-            dashboardLink.setAttribute('href', dashboardUrl);
-          } else {
-            dashboardLink.remove();
-          }
-        }
-      });
-    })();
   </script>
   <script>
     // Dynamic chart in hero-right: supports bars, line, area, donut, scatter; cycles through types
