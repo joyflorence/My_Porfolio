@@ -196,7 +196,8 @@ body{
 .card h4{margin:0 0 8px;color:var(--text)}
 .card p{color:var(--muted);margin:0 0 12px}
 .tags{font-size:0.85rem;color:var(--muted)}
-.card-link{display:inline-block;margin-top:auto;color:var(--accent-2);text-decoration:none;font-weight:700}
+.card-link{display:inline-block;margin-top:auto;color:var(--accent-2);text-decoration:none;font-weight:700;padding:8px 12px;border-radius:999px;background:linear-gradient(90deg, rgba(96,192,255,0.14), rgba(155,231,255,0.08));width:fit-content;transition:transform .2s ease, background .2s ease}
+.card-link:hover{transform:translateY(-2px);background:linear-gradient(90deg, rgba(96,192,255,0.2), rgba(155,231,255,0.14))}
 .pill{display:inline-block;background:linear-gradient(90deg, rgba(96,192,255,0.12), rgba(155,231,255,0.08));padding:6px 10px;border-radius:999px;color:var(--accent-2);font-weight:600;margin-right:8px;font-size:0.85rem}
 
 .skills-list{display:flex;flex-wrap:wrap;gap:12px;padding:0;margin:12px 0;list-style:none}
