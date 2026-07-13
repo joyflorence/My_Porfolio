@@ -1,0 +1,21 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="32" fill="#F5FCFF"/>
+  <rect x="48" y="48" width="1104" height="664" rx="24" fill="white" stroke="#DCECF6" stroke-width="2"/>
+  <rect x="84" y="96" width="220" height="132" rx="18" fill="#E7F8FF"/>
+  <rect x="340" y="96" width="300" height="132" rx="18" fill="#E7F8FF"/>
+  <rect x="676" y="96" width="440" height="132" rx="18" fill="#F7FBFF" stroke="#DDEBFA"/>
+  <rect x="84" y="268" width="1032" height="332" rx="24" fill="#FAFDFF" stroke="#E3F2F8"/>
+  <path d="M138 528C182.5 458 220 420 270 390C314.5 364 358 352 414 338C472 324 530 318 588 326C640 334 688 364 732 390C784 422 834 470 892 484C948 498 1014 492 1044 484" stroke="#60C0FF" stroke-width="18" stroke-linecap="round"/>
+  <rect x="138" y="300" width="70" height="180" rx="12" fill="#9BE7FF"/>
+  <rect x="242" y="332" width="70" height="148" rx="12" fill="#60C0FF"/>
+  <rect x="346" y="278" width="70" height="202" rx="12" fill="#0472A8"/>
+  <rect x="450" y="354" width="70" height="126" rx="12" fill="#9BE7FF"/>
+  <rect x="554" y="318" width="70" height="162" rx="12" fill="#60C0FF"/>
+  <rect x="658" y="260" width="70" height="220" rx="12" fill="#0472A8"/>
+  <rect x="84" y="632" width="210" height="28" rx="14" fill="#E7F8FF"/>
+  <rect x="320" y="632" width="174" height="28" rx="14" fill="#E7F8FF"/>
+  <rect x="520" y="632" width="182" height="28" rx="14" fill="#E7F8FF"/>
+  <text x="112" y="142" fill="#0A4D69" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700">Revenue</text>
+  <text x="360" y="142" fill="#0A4D69" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700">Margins</text>
+  <text x="706" y="140" fill="#0A4D69" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700">Live KPI View</text>
+</svg>

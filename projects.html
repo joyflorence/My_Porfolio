@@ -43,9 +43,13 @@
     <h1>Sample Projects</h1>
     <p class="muted">Focused, high-impact data work with clear problems, methodology, and outcomes.</p>
 
-    <section id="sales-insights" class="project-detail">
+    <section id="sales-insights" class="project-detail" data-code-url="" data-dashboard-url="">
       <h2>Sales Insights Dashboard</h2>
       <div class="project-banner banner-sales" role="img" aria-label="Sales dashboard visual"></div>
+      <div class="project-links">
+        <a class="project-link" data-link="code" href="#" target="_blank" rel="noopener noreferrer">Code</a>
+        <a class="project-link" data-link="dashboard" href="#" target="_blank" rel="noopener noreferrer">Dashboard</a>
+      </div>
       <h4>Problem</h4>
       <p>Mid-size omnichannel retailers have plenty of transactional data but no automated way to turn it into a timely, trustworthy business
        decision. Decisions get made late, on incomplete information, and revenue keeps getting prioritized over profitability simply because profit isn't visible in the moment.</p>
@@ -57,9 +61,13 @@
       <p>The project delivered a working retail analytics demo that transforms raw sales data into a live-style warehouse, surfaces business KPIs in a dashboard, and triggers automated margin alerts for decision support.</p>
     </section>
 
-    <section id="churn-model" class="project-detail">
+    <section id="churn-model" class="project-detail" data-code-url="" data-dashboard-url="">
       <h2>Customer Churn Model</h2>
       <div class="project-banner banner-churn" role="img" aria-label="Customer churn model visual"></div>
+      <div class="project-links">
+        <a class="project-link" data-link="code" href="#" target="_blank" rel="noopener noreferrer">Code</a>
+        <a class="project-link" data-link="dashboard" href="#" target="_blank" rel="noopener noreferrer">Dashboard</a>
+      </div>
       <h4>Problem</h4>
       <p>High churn among new users with limited visibility into root causes.</p>
       <h4>Role</h4>
@@ -72,9 +80,13 @@
       <p>Guided targeted campaigns that reduced churn 15% in the pilot cohort.</p>
     </section>
 
-    <section id="ab-testing" class="project-detail">
+    <section id="ab-testing" class="project-detail" data-code-url="" data-dashboard-url="">
       <h2>A/B Test Analysis</h2>
       <div class="project-banner banner-ab" role="img" aria-label="A/B test analysis visual"></div>
+      <div class="project-links">
+        <a class="project-link" data-link="code" href="#" target="_blank" rel="noopener noreferrer">Code</a>
+        <a class="project-link" data-link="dashboard" href="#" target="_blank" rel="noopener noreferrer">Dashboard</a>
+      </div>
       <h4>Problem</h4>
       <p>Product experiments lacked systematic analysis and reporting, causing ambiguous decisions.</p>
       <h4>Role</h4>
@@ -124,6 +136,32 @@
   </footer>
 
   <script>document.getElementById('year2').textContent=new Date().getFullYear();</script>
+  <script>
+    (function(){
+      document.querySelectorAll('.project-detail[data-code-url], .project-detail[data-dashboard-url]').forEach((project)=>{
+        const codeLink = project.querySelector('[data-link="code"]');
+        const dashboardLink = project.querySelector('[data-link="dashboard"]');
+        const codeUrl = (project.getAttribute('data-code-url') || '').trim();
+        const dashboardUrl = (project.getAttribute('data-dashboard-url') || '').trim();
+
+        if (codeLink) {
+          if (codeUrl) {
+            codeLink.setAttribute('href', codeUrl);
+          } else {
+            codeLink.remove();
+          }
+        }
+
+        if (dashboardLink) {
+          if (dashboardUrl) {
+            dashboardLink.setAttribute('href', dashboardUrl);
+          } else {
+            dashboardLink.remove();
+          }
+        }
+      });
+    })();
+  </script>
   <script>
     (function(){
       const toggle = document.querySelector('.nav-toggle');

@@ -1,0 +1,20 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="32" fill="#F7FFF9"/>
+  <rect x="48" y="48" width="1104" height="664" rx="24" fill="white" stroke="#DDEFE4" stroke-width="2"/>
+  <rect x="84" y="96" width="318" height="132" rx="18" fill="#EAFBF0"/>
+  <rect x="438" y="96" width="278" height="132" rx="18" fill="#F4FCF7" stroke="#DDEFE4"/>
+  <rect x="748" y="96" width="368" height="132" rx="18" fill="#F4FCF7" stroke="#DDEFE4"/>
+  <rect x="84" y="280" width="1032" height="324" rx="24" fill="#FAFFFB" stroke="#E4F4E8"/>
+  <path d="M158 524C242 468 292 440 378 408C458 378 536 340 620 352C700 364 764 430 840 442C914 454 978 438 1044 400" stroke="#3CB371" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="268" cy="482" r="24" fill="#34A853"/>
+  <circle cx="426" cy="438" r="24" fill="#34A853"/>
+  <circle cx="590" cy="360" r="24" fill="#2E8B57"/>
+  <circle cx="756" cy="418" r="24" fill="#34A853"/>
+  <circle cx="918" cy="392" r="24" fill="#2E8B57"/>
+  <rect x="104" y="330" width="86" height="180" rx="16" fill="#A8E6B5"/>
+  <rect x="220" y="360" width="86" height="150" rx="16" fill="#6FD68B"/>
+  <rect x="336" y="292" width="86" height="218" rx="16" fill="#2E8B57"/>
+  <text x="108" y="144" fill="#1F4D2B" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700">Churn Risk</text>
+  <text x="458" y="144" fill="#1F4D2B" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Retention</text>
+  <text x="772" y="144" fill="#1F4D2B" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700">Cohort View</text>
+</svg>

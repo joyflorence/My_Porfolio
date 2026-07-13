@@ -104,19 +104,24 @@
       </div>
       <p class="muted">A curated selection of recent analytics work. Each card opens the full case study on the projects page.</p>
       <div class="grid">
-        <article class="card">
+  
+        <article class="card" data-code-url="https://github.com/joyflorence/marginwatch" data-dashboard-url="https://marginwatch-zo8a9ppk5jmhwix8kzyy6q.streamlit.app/"></article>
           <div class="card-image bg-sales" role="img" aria-label="Sales Insights dashboard preview"></div>
           <div class="card-content">
             <h4>Sales Insights Dashboard</h4>
-            <p>Interactive dashboard to monitor revenue, product performance, and regional trends for monthly reviews.</p>
+            <p>A working retail analytics demo that transforms raw sales data into a live-style warehouse, surfaces business KPIs in a dashboard, and triggers automated margin alerts for decision support.</p>
             <div style="margin:8px 0">
-              <span class="pill">Python</span><span class="pill">SQL</span><span class="pill">Tableau</span>
+              <span class="pill">Python</span><span class="pill">PostgreSQL</span><span class="pill">Streamlit</span>
+            </div>
+            <div class="project-links">
+              <a class="project-link" data-link="code" href="#" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="project-link" data-link="dashboard" href="#" target="_blank" rel="noopener noreferrer">Dashboard</a>
             </div>
             <a class="card-link" href="projects.html#sales-insights">Open case study</a>
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" data-code-url="" data-dashboard-url=""></article>
           <div class="card-image bg-churn" role="img" aria-label="Customer churn model preview"></div>
           <div class="card-content">
             <h4>Customer Churn Model</h4>
@@ -124,17 +129,25 @@
             <div style="margin:8px 0">
               <span class="pill">Python</span><span class="pill">scikit-learn</span><span class="pill">SQL</span>
             </div>
+            <div class="project-links">
+              <a class="project-link" data-link="code" href="#" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="project-link" data-link="dashboard" href="#" target="_blank" rel="noopener noreferrer">Dashboard</a>
+            </div>
             <a class="card-link" href="projects.html#churn-model">Open case study</a>
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" data-code-url="" data-dashboard-url="">
           <div class="card-image bg-ab" role="img" aria-label="A/B test analysis preview"></div>
           <div class="card-content">
             <h4>A/B Test Analysis</h4>
             <p>Statistical analysis of feature experiments to determine significance and estimate lift for product decisions.</p>
             <div style="margin:8px 0">
               <span class="pill">Stats</span><span class="pill">Python</span><span class="pill">R</span>
+            </div>
+            <div class="project-links">
+              <a class="project-link" data-link="code" href="#" target="_blank" rel="noopener noreferrer">Code</a>
+              <a class="project-link" data-link="dashboard" href="#" target="_blank" rel="noopener noreferrer">Dashboard</a>
             </div>
             <a class="card-link" href="projects.html#ab-testing">Open case study</a>
           </div>
@@ -202,6 +215,32 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    (function(){
+      document.querySelectorAll('.card[data-code-url], .card[data-dashboard-url]').forEach((card)=>{
+        const codeLink = card.querySelector('[data-link="code"]');
+        const dashboardLink = card.querySelector('[data-link="dashboard"]');
+        const codeUrl = (card.getAttribute('data-code-url') || '').trim();
+        const dashboardUrl = (card.getAttribute('data-dashboard-url') || '').trim();
+
+        if (codeLink) {
+          if (codeUrl) {
+            codeLink.setAttribute('href', codeUrl);
+          } else {
+            codeLink.remove();
+          }
+        }
+
+        if (dashboardLink) {
+          if (dashboardUrl) {
+            dashboardLink.setAttribute('href', dashboardUrl);
+          } else {
+            dashboardLink.remove();
+          }
+        }
+      });
+    })();
   </script>
   <script>
     // Dynamic chart in hero-right: supports bars, line, area, donut, scatter; cycles through types
