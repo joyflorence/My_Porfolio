@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Projects | Awor Joy Florence</title>
-  <meta name="description" content="Project case studies by Awor Joy Florence covering dashboards, churn modeling, experimentation, and optimization.">
-  <meta property="og:title" content="Projects | Awor Joy Florence">
-  <meta property="og:description" content="Selected data analysis projects with problem, process, and outcomes.">
+  <meta name="description" content="Project case studies by Awor Joy Florence, including approach, key decisions, and honest project status.">
+  <meta property="og:title" content="Case Studies | Awor Joy Florence">
+  <meta property="og:description" content="Selected data analysis projects with context, approach, key decisions, and results.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Projects | Awor Joy Florence">
-  <meta name="twitter:description" content="Selected data analysis projects with problem, process, and outcomes.">
+  <meta name="twitter:title" content="Case Studies | Awor Joy Florence">
+  <meta name="twitter:description" content="Selected data analysis projects with context, approach, key decisions, and results.">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon.svg">
@@ -40,96 +40,131 @@
   </header>
 
   <main class="container">
-    <h1>Sample Projects</h1>
-    <p class="muted">Focused, high-impact data work with clear problems, methodology, and outcomes.</p>
+    <h1>Case Studies</h1>
+    <p class="muted">How I approached each problem, what I decided, and what happened — including where a project is still a work in progress.</p>
 
     <section id="sales-insights" class="project-detail">
+      <span class="status-badge status-live">Live</span>
       <h2>Sales Insights Dashboard</h2>
       <div class="project-banner banner-sales" role="img" aria-label="Sales dashboard visual"></div>
       <div class="project-links">
         <a class="project-link" href="https://github.com/joyflorence/marginwatch" target="_blank" rel="noopener noreferrer">Code</a>
-        <a class="project-link" href="https://marginwatch-zo8a9ppk5jmhwix8kzyy6q.streamlit.app/" target="_blank" rel="noopener noreferrer">Dashboard</a>
+        <a class="project-link" href="https://marginwatch-zo8a9ppk5jmhwix8kzyy6q.streamlit.app/" target="_blank" rel="noopener noreferrer">Live dashboard</a>
       </div>
-      <h4>Problem</h4>
-      <p>Mid-size omnichannel retailers have plenty of transactional data but no automated way to turn it into a timely, trustworthy business
-       decision. Decisions get made late, on incomplete information, and revenue keeps getting prioritized over profitability simply because profit isn't visible in the moment.</p>
-      <h4>Process</h4>
-      <p>Built an end-to-end retail analytics pipeline: ETL, warehouse modeling, KPI design, Python prototyping, and dashboard delivery..</p>
-      <h4>Final Result</h4>
-      <p>A retail analytics solution that ingests sales data, loads it into a PostgreSQL warehouse, visualizes key KPIs in a dashboard, and automates margin-drop alerts to Slack.</p>
-      <h4>Outcome</h4>
-      <p>The project delivered a working retail analytics demo that transforms raw sales data into a live-style warehouse, surfaces business KPIs in a dashboard, and triggers automated margin alerts for decision support.</p>
+
+      <h4>Context</h4>
+      <p>Mid-size omnichannel retailers generate plenty of transactional data but have no automated way to turn it into a timely decision. Revenue gets prioritized over profitability by default, simply because margin isn't visible in the moment a decision is made.</p>
+
+      <h4>Role & constraints</h4>
+      <!-- TODO: state whether this was solo or team, and any real constraint (time, data access, tooling) -->
+      <p>Solo build, end to end. Working with synthetic transactional data structured to resemble a real retail feed, since no production data was available. [TODO: note the time frame you built this in, e.g. "over 3 weeks alongside other work."]</p>
+
+      <h4>Approach</h4>
+      <p>Built the pipeline in layers rather than the dashboard first: raw ingestion → PostgreSQL warehouse modeling → KPI definitions → Streamlit front end → Slack alerting on margin drops. Each layer was testable on its own before the next one depended on it.</p>
+
+      <h4>A decision worth explaining</h4>
+      <!-- TODO: this is the section that separates a real case study from a template one - replace with
+           your actual reasoning if it differed. Interviewers ask about this section more than any other. -->
+      <p>The harder problem wasn't the ETL, it was deciding what "margin drop" should mean — a raw percentage point threshold produced too many false alerts on naturally noisy days, so the alert logic compares against a rolling baseline instead of a fixed cutoff.</p>
+
+      <h4>Result</h4>
+      <p>A working pipeline that ingests sales data, loads it into a PostgreSQL warehouse, and surfaces KPIs with automated margin-drop alerts — you can try the live dashboard above with the sample data loaded.</p>
+
+      <h4>What I'd do differently</h4>
+      <!-- TODO: one honest limitation. This is a strong signal of seniority, not a weakness to hide. -->
+      <p>[TODO: e.g. "I'd add a proper test suite around the alerting thresholds before trusting this on real financial data."]</p>
     </section>
 
     <section id="churn-model" class="project-detail">
+      <span class="status-badge status-code">Code available &middot; demo coming soon</span>
       <h2>Customer Churn Model</h2>
       <div class="project-banner banner-churn" role="img" aria-label="Customer churn model visual"></div>
       <div class="project-links">
         <a class="project-link" href="https://github.com/joyflorence/churn-model" target="_blank" rel="noopener noreferrer">Code</a>
-        <a class="project-link" href="https://example-dashboard-url.com/churn" target="_blank" rel="noopener noreferrer">Dashboard</a>
       </div>
-      <h4>Problem</h4>
-      <p>High churn among new users with limited visibility into root causes.</p>
-      <h4>Role</h4>
-      <p>Modeler & Analyst</p>
-      <h4>Process</h4>
-      <p>Feature engineering, stratified sampling, trained multiple models (XGBoost), evaluated with precision-recall.</p>
-      <h4>Final Result</h4>
-      <p>Production-ready model with cohort-based feature importance and retention recommendations.</p>
-      <h4>Outcome</h4>
-      <p>Guided targeted campaigns that reduced churn 15% in the pilot cohort.</p>
+
+      <h4>Context</h4>
+      <p>High churn among new users, with no clear view of which segments were driving it or why.</p>
+
+      <h4>Role & constraints</h4>
+      <p>Modeler & analyst. <!-- TODO: real dataset (Kaggle telco dataset? synthetic? your own)? Say so - "trained on the IBM telco churn dataset" reads as far more credible than an unnamed one. --> [TODO: name the actual dataset used.]</p>
+
+      <h4>Approach</h4>
+      <p>Feature engineering, stratified sampling to handle class imbalance, and XGBoost evaluated on precision-recall rather than accuracy, since the churn class was the minority and accuracy would have hidden a model that just predicted "stays" every time.</p>
+
+      <h4>A decision worth explaining</h4>
+      <p>[TODO: describe one real trade-off — e.g. why XGBoost over logistic regression, or how you chose the precision/recall operating point given the cost of a false positive retention offer.]</p>
+
+      <h4>Result</h4>
+      <!-- TODO: replace with a number you can defend, or a qualitative result if you don't have a validated
+           percentage. "Reduced churn 15%" with no baseline or timeframe will get challenged in an interview. -->
+      <p>A model with cohort-based feature importance that flags at-risk segments for targeted retention outreach. [TODO: add a specific, defensible metric — e.g. "recall of 0.78 on held-out test data" — instead of an unmeasured business-impact percentage.]</p>
+
+      <h4>What I'd do differently</h4>
+      <p>[TODO: one honest limitation — e.g. "the model hasn't been validated against a real intervention yet, only backtested."]</p>
     </section>
 
     <section id="ab-testing" class="project-detail">
+      <span class="status-badge status-code">Code available &middot; demo coming soon</span>
       <h2>A/B Test Analysis</h2>
       <div class="project-banner banner-ab" role="img" aria-label="A/B test analysis visual"></div>
       <div class="project-links">
         <a class="project-link" href="https://github.com/joyflorence/ab-test-analysis" target="_blank" rel="noopener noreferrer">Code</a>
-        <a class="project-link" href="https://example-dashboard-url.com/ab-test" target="_blank" rel="noopener noreferrer">Dashboard</a>
       </div>
-      <h4>Problem</h4>
-      <p>Product experiments lacked systematic analysis and reporting, causing ambiguous decisions.</p>
-      <h4>Role</h4>
-      <p>Experimentation Analyst</p>
-      <h4>Process</h4>
-      <p>Defined metrics, computed power analysis, ran Bayesian and frequentist tests, and produced clear decision rules.</p>
-      <h4>Final Result</h4>
-      <p>Standardized experiment template and reporting pipeline with confidence intervals and expected value calculations.</p>
-      <h4>Outcome</h4>
-      <p>Reduced false positives and improved experiment throughput.</p>
+
+      <h4>Context</h4>
+      <p>Product experiments lacked a systematic analysis process, so results were being read informally and decisions were made on ambiguous evidence.</p>
+
+      <h4>Role & constraints</h4>
+      <p>Experimentation analyst. [TODO: real or simulated experiment data? Name the source.]</p>
+
+      <h4>Approach</h4>
+      <p>Defined success metrics up front, ran a power analysis to size the test before launch, and analyzed results with both a frequentist test and a Bayesian model to cross-check the conclusion.</p>
+
+      <h4>A decision worth explaining</h4>
+      <p>[TODO: e.g. why you chose to report both frequentist and Bayesian results rather than one - what disagreement, if any, came up between them and how you resolved it.]</p>
+
+      <h4>Result</h4>
+      <p>A reusable experiment template and reporting pipeline with confidence intervals and expected-value calculations, built so a non-technical stakeholder can read the recommendation without needing the underlying stats explained each time.</p>
+
+      <h4>What I'd do differently</h4>
+      <p>[TODO: one honest limitation.]</p>
     </section>
 
     <section id="supply-opt" class="project-detail">
+      <span class="status-badge status-concept">Concept build &middot; not yet in a public repo</span>
       <h2>Supply Chain Optimization</h2>
       <div class="project-banner banner-supply" role="img" aria-label="Supply chain optimization visual"></div>
-      <h4>Problem</h4>
-      <p>Inventory shortages and overstock issues caused increased costs and missed sales.</p>
-      <h4>Role</h4>
-      <p>Data Analyst / Modeler</p>
-      <h4>Process</h4>
-      <p>Built demand forecasting models, optimized reorder points, and simulated scenarios.</p>
-      <h4>Final Result</h4>
-      <p>Reorder recommendations integrated into weekly planning workflow.</p>
-      <h4>Outcome</h4>
-      <p>Reduced stockouts by 28% and holding costs by 12%.</p>
+      <!-- TODO: add a project-links block with a real GitHub repo once this is pushed - a project
+           with no link at all reads better as "concept" than as a broken promise, but a real repo beats both. -->
+
+      <h4>Context</h4>
+      <p>Inventory shortages and overstock happening simultaneously across different SKUs, driving up both missed sales and holding costs.</p>
+
+      <h4>Approach</h4>
+      <p>Built a demand forecasting model and used it to recompute reorder points, then simulated the effect of the new reorder policy against historical demand.</p>
+
+      <h4>Result</h4>
+      <p>[TODO: replace with a defensible simulated result once the notebook is finished and pushed to GitHub — e.g. "simulation showed a 12% reduction in stockout days over the backtest period." Publish the repo before publishing the number.]</p>
     </section>
 
     <section id="sentiment" class="project-detail">
+      <span class="status-badge status-concept">Concept build &middot; not yet in a public repo</span>
       <h2>Sentiment Analysis</h2>
       <div class="project-banner banner-sentiment" role="img" aria-label="Sentiment analysis visual"></div>
-      <h4>Problem</h4>
-      <p>Manual review of customer feedback was slow and inconsistent.</p>
-      <h4>Role</h4>
-      <p>NLP Analyst</p>
-      <h4>Process</h4>
-      <p>Cleaned textual data, trained classifiers, and visualized topic trends with LDA and embeddings.</p>
-      <h4>Final Result</h4>
-      <p>Automated tagging and dashboards to monitor sentiment by product line.</p>
-      <h4>Outcome</h4>
-      <p>Customer satisfaction insights led to focused fixes and an 11% improvement in NPS for targeted products.</p>
+
+      <h4>Context</h4>
+      <p>Manual review of customer feedback was slow and inconsistent across reviewers.</p>
+
+      <h4>Approach</h4>
+      <p>Cleaned free-text feedback, trained a sentiment classifier, and used topic modeling (LDA) alongside embeddings to surface recurring themes rather than just positive/negative labels.</p>
+
+      <h4>Result</h4>
+      <p>[TODO: replace with a defensible result tied to a named, real dataset — e.g. Amazon or Yelp review data — once the repo is public.]</p>
     </section>
 
   </main>
+  <p class="muted" style="max-width:70ch;margin:0 auto 2rem;padding:0 1rem;">Two projects above are still concept builds without public repos yet — shown here on purpose rather than padded out with invented links, because a project I can actually show beats one I can only describe.</p>
 
   <footer class="site-footer">
     <div class="container">&copy; <span id="year2"></span> Awor Joy Florence</div>

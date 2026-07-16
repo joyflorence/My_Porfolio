@@ -62,15 +62,15 @@
         <div class="hero-left">
           <h2>Hi! I'm Awor Joy Florence</h2>
           <p class="role">Data Analyst</p>
-          <p class="value">I help teams turn messy data into growth decisions through dashboards, experimentation, and predictive analysis.</p>
+          <p class="value">I build the full path from raw data to a decision someone actually acts on — pipelines, dashboards, and the experiment design to know if a change worked.</p>
           <div class="hero-ctas">
             <a class="cta" href="#lead-form">Discuss Your Project</a>
             <a class="cta secondary" href="projects.html">View Case Studies</a>
           </div>
-          <p class="muted">Available for freelance analytics projects and full-time roles.</p>
+          <p class="muted">Available for freelance analytics projects, part-time and full-time roles.</p>
         </div>
         <div class="hero-right">
-          <div class="dynamic-chart" role="img" aria-label="Live data preview">
+          <div class="dynamic-chart" role="img" aria-label="Preview of chart styles used in my dashboards">
             <svg id="dynamicChart" viewBox="0 0 360 220" preserveAspectRatio="xMidYMid meet">
               <rect width="100%" height="100%" fill="transparent"></rect>
               <defs>
@@ -85,6 +85,7 @@
               <g id="scatter" opacity="0"></g>
               <g id="donut" transform="translate(270,60)" opacity="0"></g>
             </svg>
+            <p class="chart-caption muted" style="font-size:0.8rem;margin-top:6px;">Illustrative chart styles.<a href="projects.html">case studies</a></p>
           </div>
         </div>
       </div>
@@ -93,7 +94,10 @@
     <!-- Removed static figure; dynamic chart lives in the hero preview on the right -->
 
     <section id="about" class="about container">
-      <h3>About Me</h3>
+      <div class="section-heading">
+        <h3>About Me</h3>
+        <a class="section-link" href="about.html">Read full story</a>
+      </div>
       <p>I transform messy data into clear, actionable insights. I build dashboards, run experiments, and develop models to help teams prioritise work and measure impact. I enjoy turning ambiguity into evidence-backed recommendations and communicating findings to non-technical stakeholders.</p>
     </section>
 
@@ -131,7 +135,8 @@
             </div>
             <div class="project-links">
               <a class="project-link" href="https://github.com/joyflorence/churn-model" target="_blank" rel="noopener noreferrer">Code</a>
-              <a class="project-link" href="https://example-dashboard-url.com/churn" target="_blank" rel="noopener noreferrer">Dashboard</a>
+              <!-- TODO: no live demo yet - add one, or remove this span once you do -->
+              <span class="project-link" style="opacity:0.6;cursor:default;" aria-disabled="true">Demo coming soon</span>
             </div>
             <a class="card-link" href="projects.html#churn-model">Open case study</a>
           </div>
@@ -147,7 +152,7 @@
             </div>
             <div class="project-links">
               <a class="project-link" href="https://github.com/joyflorence/ab-test-analysis" target="_blank" rel="noopener noreferrer">Code</a>
-              <a class="project-link" href="https://example-dashboard-url.com/ab-test" target="_blank" rel="noopener noreferrer">Dashboard</a>
+              <span class="project-link" style="opacity:0.6;cursor:default;" aria-disabled="true">Demo coming soon</span>
             </div>
             <a class="card-link" href="projects.html#ab-testing">Open case study</a>
           </div>
@@ -158,12 +163,12 @@
     <section id="skills" class="skills container">
       <div class="skills-card">
         <h3>Skills</h3>
-        <p class="skills-intro">Core skills I bring to projects — focused on analysis, visualization and operational impact.</p>
+        <p class="skills-intro">Core skills I bring to projects focused on analysis, visualization and operational impact.</p>
         <ul class="skills-list">
           <li>Python (pandas, numpy)</li>
-          <li>SQL & Databases</li>
-          <li>Data Visualization (Tableau, Plotly)</li>
-          <li>Statistics & A/B Testing</li>
+          <li>SQL & Databases (PostgreSQL, MySQL)</li>
+          <li>Data Visualization (Tableau, Plotly, PowerBI)</li>
+          <li>Predictive Modelling & Forecasting</li>
           <li>Machine Learning (scikit-learn)</li>
         </ul>
       </div>
@@ -171,13 +176,13 @@
 
         <section id="contact" class="contact container">
       <h3>Contact</h3>
-      <p class="lead">Tell me what you are building, and I will respond within 24 hours.</p>
+      <p class="lead">Tell me what you are building, and I will respond to you as early as possible.</p>
       <div class="contact-layout">
         <div class="contact-details">
           <p><a class="button" href="mailto:aworjoy5@gmail.com">aworjoy5@gmail.com</a></p>
           <p><strong>Phone</strong><br>
-            <a class="muted" href="tel:+256700123456">+256 700 123 456</a><br>
-            <a class="muted" href="tel:+256711987654">+256 711 987 654</a>
+            <a class="muted" href="tel:+256 781521681">+256 781521681</a><br>
+            <a class="muted" href="tel:+256 743498651">+256 743498651</a>
           </p>
           <h4>Connect</h4>
           <p class="social-row">
@@ -188,7 +193,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.99h4V24h-4V8.99zM9.5 8.99h3.84v2.05h.06c.54-1.02 1.86-2.1 3.83-2.1 4.1 0 4.86 2.7 4.86 6.2V24h-4v-7.3c0-1.74-.03-3.98-2.42-3.98-2.42 0-2.79 1.89-2.79 3.84V24h-4V8.99z"/></svg>
             </a>
           </p>
-          <p class="muted">Availability: Open to freelance & full-time opportunities.</p>
+          <p class="muted">Availability: Open to freelance, part-time, & full-time opportunities.</p>
         </div>
         <form id="lead-form" class="lead-form" name="lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
           <input type="hidden" name="form-name" value="lead">

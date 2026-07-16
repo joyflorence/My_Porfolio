@@ -167,6 +167,10 @@ body{
 
 /* Project detail styles */
 .project-detail{background:var(--card);padding:20px;border-radius:12px;margin:28px 0;border:1px solid rgba(2,41,54,0.04);box-shadow:0 10px 30px rgba(2,41,54,0.06)}
+.status-badge{display:inline-block;font-size:0.75rem;font-weight:700;letter-spacing:0.02em;padding:4px 10px;border-radius:999px;margin-bottom:10px}
+.status-live{background:rgba(52,199,89,0.15);color:#1f7a3d}
+.status-code{background:rgba(96,192,255,0.15);color:#0472a8}
+.status-concept{background:rgba(2,41,54,0.08);color:#5a6b73}
 .project-detail img{width:100%;height:auto;border-radius:8px;margin:12px 0}
 .project-detail h4{margin:10px 0 6px}
 .project-banner{height:220px;border-radius:8px;margin:12px 0;background-size:cover;background-position:center;background-repeat:no-repeat}
