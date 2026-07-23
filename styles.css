@@ -174,11 +174,9 @@ body{
 .project-detail img{width:100%;height:auto;border-radius:8px;margin:12px 0}
 .project-detail h4{margin:10px 0 6px}
 .project-banner{height:220px;border-radius:8px;margin:12px 0;background-size:cover;background-position:center;background-repeat:no-repeat}
-.banner-sales{background-image:url('images/sales-dashboard.svg')}
+.banner-sales{background-image:url('images/sales-dashboard.png')}
 .banner-churn{background-image:url('images/churn-model.svg')}
-.banner-ab{background-image:url('images/ab-testing.svg')}
-.banner-supply{background-image:linear-gradient(120deg,#d7d4ff,#9be7ff)}
-.banner-sentiment{background-image:linear-gradient(120deg,#ffc9de,#9be7ff)}
+.banner-sentiment{background-image:url('images/sentiment.png')}
 
 /* About page */
 .about-me{background:var(--card);padding:20px;border-radius:12px;border:1px solid rgba(2,41,54,0.04)}
@@ -193,9 +191,9 @@ body{
 .card{background:var(--card);padding:0;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(2,41,54,0.04);box-shadow:0 8px 30px rgba(2,41,54,0.06);transition:transform .26s ease,box-shadow .26s ease;display:flex;flex-direction:column;height:100%}
 .card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(2,41,54,0.12)}
 .card-image{height:180px;background-size:cover;background-position:center;background-repeat:no-repeat}
-.card-image.bg-sales{background-image:url('images/sales-dashboard.svg')}
+.card-image.bg-sales{background-image:url('images/sales-dashboard.png')}
 .card-image.bg-churn{background-image:url('images/churn-model.svg')}
-.card-image.bg-ab{background-image:url('images/ab-testing.svg')}
+.card-image.bg-ab{background-image:url('images/sentiment.png')}
 .card-content{padding:18px;display:flex;flex-direction:column;flex:1}
 .card h4{margin:0 0 8px;color:var(--text)}
 .card p{color:var(--muted);margin:0 0 12px}

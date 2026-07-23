@@ -26,15 +26,13 @@
         </path>
       </svg>
       <div class="welcome-text">
-        <h1 id="welcome-title">Welcome! I'm Awor Joy Florence</h1>
-        <p class="muted">Data Analyst, I turn data into decisions</p>
+        <h1 id="welcome-title">Welcome!</h1>
       </div>
     </div>
   </div>
   <header class="site-header">
     <div class="container header-inner">
       <div class="profile-photo profile-small profile-initials" aria-hidden="true">AJ</div>
-      <h1 class="logo">Awor Joy Florence</h1>
 
       <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
         <span class="hamburger"></span>
@@ -60,9 +58,9 @@
     <section class="hero">
       <div class="container">
         <div class="hero-left">
-          <h2>Hi! I'm Awor Joy Florence</h2>
-          <p class="role">Data Analyst</p>
-          <p class="value">I build the full path from raw data to a decision someone actually acts on — pipelines, dashboards, and the experiment design to know if a change worked.</p>
+          <p class="value">I help turn raw data into meaning insights by extracting relevant and important notes that drive decision making processes.
+            I also perform risk analysis specialised in financial inclusion, where I review policies, perform risk tracking
+          on risk register, help ensure a company is compliant with both internal and external policies and regulations</p>
           <div class="hero-ctas">
             <a class="cta" href="#lead-form">Discuss Your Project</a>
             <a class="cta secondary" href="projects.html">View Case Studies</a>
@@ -98,7 +96,7 @@
         <h3>About Me</h3>
         <a class="section-link" href="about.html">Read full story</a>
       </div>
-      <p>I transform messy data into clear, actionable insights. I build dashboards, run experiments, and develop models to help teams prioritise work and measure impact. I enjoy turning ambiguity into evidence-backed recommendations and communicating findings to non-technical stakeholders.</p>
+      <p>I transform messy data into clear, actionable insights. I build dashboards and develop models to help teams prioritise work and measure impact. I enjoy turning ambiguity into evidence-backed recommendations and communicating findings to non-technical stakeholders that drive decison making.</p>
     </section>
 
     <section id="projects" class="projects container">
@@ -129,32 +127,30 @@
           <div class="card-image bg-churn" role="img" aria-label="Customer churn model preview"></div>
           <div class="card-content">
             <h4>Customer Churn Model</h4>
-            <p>Predictive model identifying at-risk customers with actionable segments for retention campaigns.</p>
+            <p> </p>
             <div style="margin:8px 0">
               <span class="pill">Python</span><span class="pill">scikit-learn</span><span class="pill">SQL</span>
             </div>
             <div class="project-links">
-              <a class="project-link" href="https://github.com/joyflorence/churn-model" target="_blank" rel="noopener noreferrer">Code</a>
-              <!-- TODO: no live demo yet - add one, or remove this span once you do -->
+              <a class="project-link" style="opacity:0.6;cursor:default;" aria-disabled="true">Code</a>
               <span class="project-link" style="opacity:0.6;cursor:default;" aria-disabled="true">Demo coming soon</span>
-            </div>
             <a class="card-link" href="projects.html#churn-model">Open case study</a>
           </div>
         </article>
 
         <article class="card">
-          <div class="card-image bg-ab" role="img" aria-label="A/B test analysis preview"></div>
+          <div class="card-image bg-ab" role="img" aria-label="sentiment"></div>
           <div class="card-content">
-            <h4>A/B Test Analysis</h4>
-            <p>Statistical analysis of feature experiments to determine significance and estimate lift for product decisions.</p>
+            <h4>Sentiment Analysis</h4>
+            <p> </p>
             <div style="margin:8px 0">
-              <span class="pill">Stats</span><span class="pill">Python</span><span class="pill">R</span>
+              <span class="pill">BeautifulSoup</span><span class="pill">request(url)</span><span class="pill">Python (matplotlib.pyplot and pandas)</span><span class="pill">WordCloud</span>
             </div>
             <div class="project-links">
-              <a class="project-link" href="https://github.com/joyflorence/ab-test-analysis" target="_blank" rel="noopener noreferrer">Code</a>
-              <span class="project-link" style="opacity:0.6;cursor:default;" aria-disabled="true">Demo coming soon</span>
+              <a class="project-link" href="https://github.com/joyflorence/Data-miming-and-analytics/blob/main/practical/Text%20mining/method2_textminig.ipynb" target="_blank" rel="noopener noreferrer">Code</a>
+              <!--<span class="project-link" style="opacity:0.6;cursor:default;" aria-disabled="true">Demo coming soon</span>-->
             </div>
-            <a class="card-link" href="projects.html#ab-testing">Open case study</a>
+            <a class="card-link" href="projects.html#sentiment">Open case study</a>
           </div>
         </article>
       </div>
@@ -356,7 +352,6 @@
 
       // initial
       tick();
-      setInterval(tick, 2600);
 
     })();
   </script>
@@ -375,8 +370,10 @@
       const getFocusable = ()=> Array.from(overlay.querySelectorAll(focusableSelector)).filter(el=>!el.hasAttribute('disabled'));
       const url = new URL(window.location.href);
       const suppressFromQuery = url.searchParams.get('suppressWelcome') === '1';
-      // If the user clicked the header logo to navigate here, suppress the overlay
-      if (suppressFromQuery || sessionStorage.getItem('suppressWelcome')){
+      const welcomeAlreadySeen = sessionStorage.getItem('welcomeSeen');
+      // Show the welcome screen only once per browser session, so refreshing or
+      // returning to the home page does not feel like starting over.
+      if (suppressFromQuery || sessionStorage.getItem('suppressWelcome') || welcomeAlreadySeen){
         sessionStorage.removeItem('suppressWelcome');
         if (suppressFromQuery){
           url.searchParams.delete('suppressWelcome');
@@ -386,6 +383,7 @@
         overlay.remove();
         return;
       }
+      sessionStorage.setItem('welcomeSeen', '1');
       const removeOverlay = ()=>{
         if (removed) return;
         removed = true;
